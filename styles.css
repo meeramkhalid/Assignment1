@@ -1,0 +1,55 @@
+body {
+    background-image: url('images/Plain-light-blue-background.jpg.crdownload');
+    font-family: Arial, sans-serif;
+}
+.MainInfo{
+    margin-left:9%;
+    margin-top: 5%;
+}
+.heading{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+.navbar {
+    margin-left: 0%;
+    opacity: 1;
+    height: 100%;
+    width: 130px; /* Set width for the navbar */
+    background-color: #58c5f7;
+    position: fixed; /* Fixed the navbar on the left side */
+    top: 0;
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+/* Links inside the navigation bar */
+.navbar a {
+    display: block; /* Make links take up full width */
+    color: white;
+    padding: 14px 20px;
+    text-align: left;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add margin to the content so it's not hidden under the navbar */
+div {
+    margin-left: 200px;
+}
+.image {
+    margin-left: 60%; /* To make space for the navbar */
+    padding: 20px;
+
+}
+
+.image img {
+    width: 80%;
+    height: 80%;
+    size: 50px;
+    display: block;
+}

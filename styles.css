@@ -1,6 +1,27 @@
 body {
-    background-image: url('images/Plain-light-blue-background.jpg.crdownload');
+    background-image: url('images/LBbg.jpg');
     font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    background-size: cover;
+    background-attachment: fixed; /* Makes the background stay in place */
+    background-position: center;
+    overflow-x: hidden;
+}
+.highlighted-name {
+    font-weight: bold;
+    font-size: 1.2em; 
+    color: rgb(14, 14, 85);
+}
+
+.mainHeading
+{
+    text-align: center;
+    margin-right: 25%;
+    font-size: xx-large;
+    text-decoration:underline;
+    color: rgb(2, 35, 85); 
+
 }
 .MainInfo{
     margin-left:9%;
@@ -8,7 +29,12 @@ body {
 }
 .heading{
     font-family: 'Times New Roman', Times, serif;
-    font-size: larger;
+    font-size:x-large;
+    color: rgb(14, 14, 85);
+}
+.paragraph{
+    margin-right: 50%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .navbar {
     margin-left: 0%;
@@ -24,8 +50,8 @@ body {
 
 /* Links inside the navigation bar */
 .navbar a {
-    display: block; /* Make links take up full width */
-    color: white;
+    display: block; 
+    color: rgb(14, 14, 85);
     padding: 14px 20px;
     text-align: left;
     text-decoration: none;
@@ -33,23 +59,139 @@ body {
 
 /* Change color on hover */
 .navbar a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #a0ddf9;
+    color: rgb(14, 14, 85);
 }
 
 /* Add margin to the content so it's not hidden under the navbar */
 div {
     margin-left: 200px;
 }
-.image {
-    margin-left: 60%; /* To make space for the navbar */
-    padding: 20px;
-
+.image-container {
+    position: relative;
+    align-items: center;
+    margin-left: 55%;
+    margin-top: -10%;
+    width: 50%; 
+    height: 50%;
 }
 
-.image img {
+.background-img {
     width: 80%;
-    height: 80%;
-    size: 50px;
+    margin-bottom: 50%;
+    transform: translateX(-10%);
+    transition: bottom 1s, left 1s;
+    height: auto;
     display: block;
+}
+.background-img:hover{
+    left:15%;
+}
+.overlay-img {
+    position: absolute;
+    transform: translateX(-10%);
+    transition: bottom 1s, left 1s;
+    margin-left: 10%;
+    top: 10%;
+    top: 0;
+    left: 0;
+    width: 60%; 
+    height: auto; 
+}
+.overlay-img:hover{
+    left:10%;
+}
+
+#home, #education, #skills, #certificates, #courses, #experience, #contact {
+    height: 600px;
+}
+.cv-button {
+    text-align: center;
+    margin-left: 30%;
+    margin-top: -30%;
+    font-size: large;
+    padding: 10px 20px;
+    background-color: rgb(2, 35, 85); /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.cv-button:hover {
+    background-color: #a0ddf9;
+    color: rgb(14, 14, 85);
+}
+.education-container {
+    margin-top: 5%;
+    display: flex;
+    align-items: center; /* Vertically center the text and image */
+    gap: 15px; /* Optional: space between the image and the text */
+}
+.edu{
+    width:30%;
+    height: 30%;
+   align-items: flex-start;
+    /* margin-top:5%; */
+}
+.education-text {
+    font-size: 16px;
+    color: #333;
+}
+/* Flexbox to align image and categories side by side */
+.skills-container {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Space between image and categories */
+}
+
+/* Image styling */
+.skills {
+    width: 30%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Container for positioning videos */
+.skills-container {
+    display: flex; /* Align items horizontally */
+    gap: 20px; /* Space between videos */
+    justify-content: center; /* Center align the videos horizontally */
+}
+
+/* Styling for the videos */
+.video {
+    width: 45%; /* Adjust width as needed, ensuring both fit within the container */
+    height: auto; /* Maintain aspect ratio */
+    /* Optional: add borders or other styles if needed */
+    border: 1px solid #ddd; /* Example border */
+}
+.project-categories {
+    margin-top: 20px;
+}
+
+.accordion {
+    background-color: #1ea8e8;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color:  #1ea8e8;
+}
+
+.panel ul {
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 20px;
 }

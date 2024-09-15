@@ -140,13 +140,6 @@ div {
     font-size: 16px;
     color: #333;
 }
-/* Flexbox to align image and categories side by side */
-.skills-container {
-    display: flex;
-    align-items: flex-start; /* Align items at the top */
-    gap: 20px; /* Space between image and categories */
-}
-
 /* Image styling */
 .skills {
     width: 30%;
@@ -155,17 +148,54 @@ div {
 
 /* Container for positioning videos */
 .skills-container {
-    display: flex; /* Align items horizontally */
-    gap: 20px; /* Space between videos */
-    justify-content: center; /* Center align the videos horizontally */
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
 }
 
-/* Styling for the videos */
-.video {
-    width: 45%; /* Adjust width as needed, ensuring both fit within the container */
-    height: auto; /* Maintain aspect ratio */
-    /* Optional: add borders or other styles if needed */
-    border: 1px solid #ddd; /* Example border */
+/* Background video styling */
+.skills-container .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    object-fit: cover; /* Ensures the video covers the container */
+    z-index: -3; /* Push this video to the back */
+}
+
+/* The two main videos */
+.skills-container .video {
+    position: absolute;
+    top: 15%;
+    bottom:10%;
+    right:53%;
+    padding-left: 8%;
+    padding-right:8%;
+    width: 52%; /* Adjust this to fit the layout */
+    height: 52%;
+    gap:7%;
+    object-fit: cover;
+    z-index: -1; /* These videos will be layered above the background video */
+}
+
+/* Position the second video to the right */
+.skills-container .video:nth-child(2) {
+    left: 35%; /* Puts the second video on the right side */
+    right:80%;
+    /* right:30%; */
+    /* padding-left:10%; */
+    padding-right:10%;
+}
+
+/* Content and heading styling */
+.skills-container h2, .skills-container .content {
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 1; /* Keeps text above all videos */
+    padding: 20px;
 }
 /* Container for the project section */
 .projects-container {
@@ -217,30 +247,43 @@ div {
 .panel li {
     padding: 5px 0;
 }
-.courses-table {
-    width: 60%;
-    border-collapse: collapse;
+.courses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     margin-top: 20px;
+    margin-bottom: 50px;
+    width:30%;
+    padding-bottom: 20%;
 }
 
-.courses-table th, .courses-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+.course-item {
+    display: flex;
+    /* align-items: center; */
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensures it spans the full width */
 }
 
-.courses-table th {
-    background-color: #f2f2f2;
+.course-number {
     font-weight: bold;
+    margin-right: 20px;
+    font-size: 1.2em;
+    color: #007BFF;
 }
 
-.courses-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+.course-name {
+    font-size: 1em;
+    color: #333;
 }
 
-.courses-table tr:hover {
-    background-color: #f1f1f1;
+/* Optional: Add this to remove extra padding/margins around the section */
+.section {
+    padding-left: 0;
 }
+
 .experience-container {
     display: flex;
     align-items: flex-start; /* Align the image and text at the top */

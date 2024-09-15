@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
@@ -71,17 +72,31 @@
         <h2 class="heading">Skills & Certificates</h2>
         
         <div class="skills-container">
+            <!-- Background video -->
+            <video class="background-video" autoplay loop muted>
+                <source src="images/WhatsApp Video 2024-09-15 at 12.22.53 AM.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+    
+            <!-- First main video -->
             <video class="video" autoplay loop muted>
                 <source src="images/skills.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+    
+            <!-- Second main video -->
             <video class="video" autoplay loop muted>
                 <source src="images/certificates.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+    
+            <!-- Optional content over the videos -->
+            <!-- <div class="content">
+                <h2>My Skills & Certificates</h2>
+                <p>Here are some of the skills and certificates I've acquired.</p>
+            </div> -->
         </div>
     </div>
-    
     <div id="projects" class="section MainInfo">
         <h2 class="heading">Projects</h2>
         <div class="projects-container">
@@ -133,65 +148,56 @@
         <h2 class="heading">Courses</h2>
         <p>My completed courses:</p>
         
-        <!-- Table for the courses -->
-        <table class="courses-table">
-            <thead>
-                <tr>
-                    <th>Course Number</th>
-                    <th>Course Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Computing Fundamentals and Programming</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Information and Communication Technology (ICT)</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Object Oriented Programming (OOP)</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Basic Electronics</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Digital Logic Design (DLD)</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Data Structures and Algorithm (DSA)</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Discrete Structures (DS)</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Linear Algebra</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>Calculus</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>Differential Equation</td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>Computer Architecture and Assembly Language</td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>Database</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="courses-list">
+            <div class="course-item">
+                <span class="course-number">1</span>
+                <span class="course-name">Computing Fundamentals and Programming</span>
+            </div>
+            <div class="course-item">
+                <span class="course-number">2</span>
+                <span class="course-name">Information and Communication Technology (ICT)</span>
+            </div>
+            <div class="course-item">
+                <span class="course-number">3</span>
+                <span class="course-name">Object Oriented Programming (OOP)</span>
+            </div>
+            <div class="course-item">
+                <span class="course-number">4</span>
+                <span class="course-name">Basic Electronics</span>
+            </div>
+            <div class="course-item">
+                <span class="course-number">5</span>
+                <span class="course-name">Digital Logic Design (DLD)</span>
+            </div>
+            <div class="course-item">
+                <span class="course-number">6</span>
+                <span class="course-name">Data Structures and Algorithm (DSA)</span>
+            </div>
+            <div class="course-item">
+                <span class="course-number">7</span>
+                <span class="course-name">Discrete Structures (DS)</span>
+            </div>
+            <div class="course-item">
+                <span class="course-number">8</span>
+                <span class="course-name">Linear Algebra</span>
+            </div>
+            <div class="course-item">
+                <span class="course-number">9</span>
+                <span class="course-name">Calculus</span>
+            </div>
+            <div class="course-item">
+                <span class="course-number">10</span>
+                <span class="course-name">Differential Equation</span>
+            </div>
+            <div class="course-item">
+                <span class="course-number">11</span>
+                <span class="course-name">Computer Architecture and Assembly Language</span>
+            </div>
+            <div class="course-item">
+                <span class="course-number">12</span>
+                <span class="course-name">Database</span>
+            </div>
+        </div>
     </div>
     
 
@@ -205,10 +211,10 @@
             <!-- Experience text content -->
             <div class="experience-text">
                 <h3>1. Internship</h3>
-                <p>Worked at Aerodyne for 2 months (june-august).</p>
+                <p>Worked at Aerodyne for 2 months as front end Intern(june-august).</p>
     
                 <h3>2. TAship</h3>
-                <p>Currently DSA Teaching Assistant (TA).</p>
+                <p>Currently Iam DSA Teaching Assistant (TA).</p>
             </div>
         </div>
     </div>

@@ -24,16 +24,15 @@ function toggleList(id) {
     const list = document.getElementById(id);
     list.classList.toggle('hidden'); // Toggle between showing and hiding the list
 }
-// Get all elements with class="accordion"
-var acc = document.getElementsByClassName("accordion");
-for (var i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        // Toggle between hiding and showing the active panel
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
+// Get all accordion buttons
+const accordions = document.querySelectorAll(".accordion");
+
+// Loop through each accordion and add event listener
+accordions.forEach(accordion => {
+    accordion.addEventListener("click", function() {
+        const panel = this.nextElementSibling;
+
+        // Toggle between showing and hiding the panel
+        panel.style.display = (panel.style.display === "block") ? "none" : "block";
     });
-}
+});

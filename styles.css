@@ -103,7 +103,7 @@ div {
 }
 
 #home, #education, #skills, #certificates, #courses, #experience, #contact {
-    height: 600px;
+    height: 700px;
 }
 .cv-button {
     text-align: center;
@@ -167,31 +167,133 @@ div {
     /* Optional: add borders or other styles if needed */
     border: 1px solid #ddd; /* Example border */
 }
-.project-categories {
-    margin-top: 20px;
+/* Container for the project section */
+.projects-container {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between buttons */
 }
 
+/* Accordion button styling */
 .accordion {
-    background-color: #1ea8e8;
-    color: #333;
+    background-color:rgb(2, 35, 85); 
+    color: #f8f3f3;
     cursor: pointer;
-    padding: 10px;
-    width: 100%;
+    padding: 15px;
+    width: 100%; /* Make the button full width */
+    text-align: left; /* Align text to the left */
     border: none;
-    text-align: left;
     outline: none;
     font-size: 16px;
+    transition: 0.3s;
+    border-radius: 15%;
 }
 
+/* Change color on hover */
+.accordion:hover {
+    background-color:#58c5f7;
+    color: rgb(2, 35, 85); 
+}
+
+/* Panel hidden by default */
 .panel {
     padding: 0 18px;
     display: none;
+    background-color:#58c5f7;
+    color: rgb(2, 35, 85); 
     overflow: hidden;
-    background-color:  #1ea8e8;
+    border-radius: 15%;
+    width: 100%;
 }
 
+/* List styling */
 .panel ul {
-    list-style-type: disc;
-    margin: 0;
-    padding-left: 20px;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 10px 0;
+}
+
+.panel li {
+    padding: 5px 0;
+}
+.courses-table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.courses-table th, .courses-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.courses-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.courses-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.courses-table tr:hover {
+    background-color: #f1f1f1;
+}
+.experience-container {
+    display: flex;
+    align-items: flex-start; /* Align the image and text at the top */
+    gap: -10%; /* Space between image and text */
+}
+
+.exp {
+    width: 20%; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+}
+
+.experience-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.experience-text h3 {
+    margin: 10px 0 5px 0; /* Add margin to headings */
+    font-weight: bold;
+    color: #032242; /* Optional: Color for headings */
+}
+
+.experience-text p {
+    margin: 0 0 15px 0; /* Add space below each paragraph */
+}
+.contact-info {
+    list-style-type: none; /* Removes bullets */
+    padding: 0; /* Removes default padding */
+    font-size: 18px; /* Increases font size */
+    color: #333; /* Text color */
+}
+
+.contact-info li {
+    margin-bottom: 10px; /* Adds space between each item */
+    display: flex;
+    align-items: center; /* Aligns icons with text */
+    font-weight: bold;
+}
+
+.contact-info a {
+    color: #000; /* Changes link color */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.contact-info a:hover {
+    color: #003898; /* Optional: Change color on hover */
+}
+
+.contact-info i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 20px; /* Adjust icon size */
+}
+.fa-brands fa-linkedin{
+    font-size: 50%;
 }

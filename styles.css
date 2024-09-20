@@ -10,10 +10,38 @@ body {
 }
 .highlighted-name {
     font-weight: bold;
-    font-size: 1.2em; 
+    font-size: 1.5em; 
     color: rgb(14, 14, 85);
 }
-
+.navbar {
+    margin-left: 0%;
+    opacity: 1;
+    height: 100%;
+    width: 170px; /* Set width for the navbar */
+    background-color: #58c5f7;
+    position: fixed; /* Fixed the navbar on the left side */
+    top: 0;
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scrolling */
+}
+/* Links inside the navigation bar */
+.navbar a {
+    display: block; 
+    color: rgb(14, 14, 85);
+    padding: 14px 20px;
+    text-align: left;
+    font-size: medium;
+    text-decoration: none;
+}
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #a0ddf9;
+    color: rgb(14, 14, 85);
+}
+/* Add margin to the content so it's not hidden under the navbar */
+div {
+    margin-left: 200px;
+}
 .mainHeading
 {
     text-align: center;
@@ -27,83 +55,80 @@ body {
     margin-left:9%;
     margin-top: 5%;
 }
+.Headings-container {
+    background-color: rgb(2, 35, 85); /* Background color for the heading box */
+    padding: 1px; /* Adds space inside the box */
+    width: calc(100% + 40px); /* Full width including compensation for the negative margin */
+    position: relative;
+    margin-left: -20px; /* Negative margin to align with the navbar */
+    color: white; /* White text for contrast */
+    text-align: center; /* Centers the heading inside the container */
+    margin-bottom: 20px; /* Adds space between heading and next section */
+    box-sizing: border-box; /* Ensures padding is included in width calculations */
+    z-index: 1; /* Keeps the heading above other content */
+}
 .heading{
     font-family: 'Times New Roman', Times, serif;
-    font-size:x-large;
-    color: rgb(14, 14, 85);
+    font-weight: bold;
+    font-size: xx-large;
+    color: white; /* White text for better contrast */
 }
-.paragraph{
-    margin-right: 50%;
+.section {
+    margin-left: 190px; /* Matches the width of the navbar */
+    padding-right: 20px; /* Optional padding for the right side */
+}
+
+.box-container {
+    background-color: rgba(0, 49, 83, 0.5); /* Semi-transparent background */
+    padding: 25px; /* Adds space inside the box */
+    border-radius: 10px; /* Rounded corners */
+    margin-left: 5%; /* Align with the navbar */
+    margin-top: 5%;
+    max-width: 50%; /* Controls width */
+    color: white; /* White text for contrast */
+    position: relative; /* Ensures z-index will work properly */
+    z-index: 1; /* Keeps the box underneath the image */
+}
+.paragraph {
+    margin-top: 5%;
+    margin-right: 0; /* Adjust margin to fit inside the box */
+    font-size: larger;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.navbar {
-    margin-left: 0%;
-    opacity: 1;
-    height: 100%;
-    width: 130px; /* Set width for the navbar */
-    background-color: #58c5f7;
-    position: fixed; /* Fixed the navbar on the left side */
-    top: 0;
-    left: 0;
-    overflow-x: hidden; /* Disable horizontal scrolling */
-}
-
-/* Links inside the navigation bar */
-.navbar a {
-    display: block; 
-    color: rgb(14, 14, 85);
-    padding: 14px 20px;
-    text-align: left;
-    text-decoration: none;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-    background-color: #a0ddf9;
-    color: rgb(14, 14, 85);
-}
-
-/* Add margin to the content so it's not hidden under the navbar */
-div {
-    margin-left: 200px;
 }
 .image-container {
     position: relative;
     align-items: center;
-    margin-left: 55%;
-    margin-top: -10%;
+    margin-left: 55%; /* Adjust to keep images aligned properly */
+    margin-top: -13%; /* Negative margin to move the image slightly up */
     width: 50%; 
     height: 50%;
+    z-index: 2; /* Ensures the image overlaps the box */
 }
 
 .background-img {
     width: 80%;
-    margin-bottom: 50%;
     transform: translateX(-10%);
     transition: bottom 1s, left 1s;
     height: auto;
     display: block;
 }
-.background-img:hover{
-    left:15%;
-}
+
 .overlay-img {
     position: absolute;
     transform: translateX(-10%);
     transition: bottom 1s, left 1s;
     margin-left: 10%;
-    top: 10%;
     top: 0;
     left: 0;
     width: 60%; 
     height: auto; 
 }
-.overlay-img:hover{
-    left:10%;
-}
 
+.overlay-img:hover {
+    left: 10%;
+}
 #home, #education, #skills, #certificates, #courses, #experience, #contact {
-    height: 700px;
+    height: 750px;
 }
 .cv-button {
     text-align: center;
@@ -254,6 +279,7 @@ div {
     margin-top: 20px;
     margin-bottom: 50px;
     width:30%;
+    /* height: 30%; */
     padding-bottom: 20%;
 }
 

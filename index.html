@@ -11,14 +11,14 @@
         /* Basic styles for the navbar */
         .navbar a.active {
             font-weight: bold;
-            background-color:  #a0ddf9; /* Button-like background */
-            color:rgb(14, 14, 85); /* Text color for the active link */
-            border:rgb(14, 14, 85); /* Optional border */
+            background-color:  #a0ddf9; 
+            color:rgb(14, 14, 85); 
+            border:rgb(14, 14, 85); 
            
         }
 
         html {
-            scroll-behavior: smooth; /* Smooth scroll */
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -36,20 +36,27 @@
     </div>
 
     <div id="home" class="section MainInfo">
-        <div><h1 class="mainHeading">Professional Profile</h1></div>
-        <h2 class="heading">ABOUT ME</h2>
-        <p class="paragraph">Hello, I’m <span class="highlighted-name">Meeram Khalid (میرام خالد)</span>, a 21-year-old passionate about web development and technology. With a keen interest in crafting intuitive user interfaces and solving complex problems, I am dedicated to leveraging my skills and enthusiasm in the tech industry. My journey in web development is driven by a commitment to continuous learning and innovation, 
-            enabling me to stay current with the latest trends and best practices in the field.</p>
+    <div class="Headings-container"> <h1 class="heading">About Me</h1></div>
+        <div class="box-container">
+            <p class="paragraph">
+                Hello, I’m <span class="highlighted-name">Meeram Khalid (میرام خالد)</span>, a 21-year-old passionate about web development and technology. 
+                With a keen interest in crafting intuitive user interfaces and solving complex problems, I am dedicated to leveraging my skills and enthusiasm 
+                in the tech industry. My journey in web development is driven by a commitment to continuous learning and innovation, enabling me to stay current 
+                with the latest trends and best practices in the field.
+            </p>
+        </div>
+    
         <div class="image-container">
             <img src="images/blueBlud.jpg" alt="Background Image" class="background-img">
             <img src="images/WhatsApp_Image_2024-09-14_at_6.36.45_PM-removebg.png" alt="Overlay Image" class="overlay-img">
         </div>
-    </div>
-    <a href="C:\Users\Meeram Khalid\Downloads\Meeram Khalid_Resume.pdf" class="cv-button" download>Download CV</a>
+        <a href="C:\Users\Meeram Khalid\Downloads\Meeram Khalid_Resume.pdf" class="cv-button" download>Download CV</a>
 
+    </div>
+    
+   
     <div id="education" class="section MainInfo">
-        <h2 class="heading">Education 
-        </h2> 
+        <div class="Headings-container"> <h1 class="heading">Education</h1></div>
         <div class="education-container">
             <img src="images/education.png" class="edu" alt="Education Icon">
             <p class="education-text"> <ul>
@@ -69,8 +76,7 @@
         </div>
     </div>
     <div id="skills" class="section MainInfo">
-        <h2 class="heading">Skills & Certificates</h2>
-        
+        <div class="Headings-container"> <h1 class="heading">Skills & Certificates</h1></div>
         <div class="skills-container">
             <!-- Background video -->
             <video class="background-video" autoplay loop muted>
@@ -98,7 +104,7 @@
         </div>
     </div>
     <div id="projects" class="section MainInfo">
-        <h2 class="heading">Projects</h2>
+        <div class="Headings-container"> <h1 class="heading">Projects</h1></div>
         <div class="projects-container">
             <button class="accordion">C++ Projects</button>
             <div class="panel">
@@ -145,9 +151,7 @@
         </div>
     </div>
     <div id="courses" class="section MainInfo">
-        <h2 class="heading">Courses</h2>
-        <p>My completed courses:</p>
-        
+        <div class="Headings-container"> <h1 class="heading">Courses</h1></div>
         <div class="courses-list">
             <div class="course-item">
                 <span class="course-number">1</span>
@@ -202,7 +206,7 @@
     
 
     <div id="experience" class="section MainInfo">
-        <h2 class="heading">Experience</h2>
+        <div class="Headings-container"> <h1 class="heading">Experience</h1></div>
         
         <div class="experience-container">
             <!-- Image for experience -->
@@ -221,7 +225,7 @@
     
 
     <div id="contact" class="section MainInfo">
-        <h2 class="heading">Contact</h2>
+        <div class="Headings-container"> <h1 class="heading">Contact</h1></div>
         <p>Feel free to contact me!</p>
         
         <ul class="contact-info">

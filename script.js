@@ -210,6 +210,94 @@ function populateProjectsSection() {
         });
     });
 }
+const coursesData = {
+    heading: "Courses",
+    items: [
+        "Computing Fundamentals and Programming",
+        "Information and Communication Technology (ICT)",
+        "Object Oriented Programming (OOP)",
+        "Basic Electronics",
+        "Digital Logic Design (DLD)",
+        "Data Structures and Algorithm (DSA)",
+        "Discrete Structures (DS)",
+        "Linear Algebra",
+        "Calculus",
+        "Differential Equation",
+        "Computer Architecture and Assembly Language",
+        "Database"
+    ]
+};
+
+// Function to populate the courses section
+function populateCoursesSection() {
+    // Set the courses heading
+    document.querySelector('#CourseHeading').textContent = coursesData.heading; // Use '#' to select by ID
+
+    // Populate the courses list
+    const coursesList = document.querySelector('.courses-list');
+    coursesList.innerHTML = ''; // Clear any existing content
+
+    coursesData.items.forEach((course, index) => {
+        // Create course item
+        const courseItem = document.createElement('div');
+        courseItem.className = 'course-item';
+        
+        // Create course number span
+        const courseNumber = document.createElement('span');
+        courseNumber.className = 'course-number';
+        courseNumber.textContent = index + 1; // Course number
+        
+        // Create course name span
+        const courseName = document.createElement('span');
+        courseName.className = 'course-name';
+        courseName.textContent = course; // Course name
+
+        // Append spans to course item
+        courseItem.appendChild(courseNumber);
+        courseItem.appendChild(courseName);
+
+        // Append course item to the courses list
+        coursesList.appendChild(courseItem);
+    });
+}
+const experienceData = {
+    heading: "Experience",
+    experiences: [
+        {
+            title: "Internship",
+            description: "Worked at Aerodyne for 2 months as front end Intern (June-August)."
+        },
+        {
+            title: "TAship",
+            description: "Currently I am a DSA Teaching Assistant (TA)."
+        }
+    ]
+};
+
+// Function to populate the experience section
+function populateExperienceSection() {
+    // Set the experience heading
+    document.querySelector('#ExperienceHeading').textContent = experienceData.heading;
+
+    // Populate the experience container
+    const experienceContainer = document.querySelector('.experience-text');
+    experienceContainer.innerHTML = ''; // Clear any existing content
+
+    experienceData.experiences.forEach((exp, index) => {
+        // Create a heading for the experience
+        const expTitle = document.createElement('h3');
+        expTitle.textContent = `${index + 1}. ${exp.title}`; // Title with numbering
+
+        // Create a paragraph for the description
+        const expDescription = document.createElement('p');
+        expDescription.textContent = exp.description; // Description
+
+        // Append title and description to the experience container
+        experienceContainer.appendChild(expTitle);
+        experienceContainer.appendChild(expDescription);
+    });
+}
+
 
 // Function to highlight the current section link while scrolling
 function highlightCurrentSection() {
@@ -259,6 +347,8 @@ window.onload = function() {
     populateEducationSection();
     populateSkillsSection();
     populateProjectsSection();
+    populateCoursesSection();
+    populateExperienceSection();
 };
 
 // Attach the scroll event for highlighting the current section

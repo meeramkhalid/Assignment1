@@ -14,7 +14,7 @@ function populateNavbar() {
     const navbar = document.getElementById('navbar');
     profileData.navLinks.forEach(link => {
         const navItem = document.createElement('a');
-        navItem.href = `#${link.toLowerCase().replace(/ /g, '')}`;
+        navItem.href = `#${link.replace(/ & /g, '').replace(/ /g, '').toLowerCase()}`;
         navItem.textContent = link;
         navItem.classList.add('nav-link');
         navbar.appendChild(navItem);
@@ -99,14 +99,16 @@ const skillsData = {
         }
     ]
 };
-// Function to populate the skills & certificates section
 function populateSkillsSection() {
     // Set the skills section heading
     document.getElementById('skillsHeading').textContent = skillsData.heading;
 
     // Set the background video
     const backgroundVideoElement = document.getElementById('backgroundVideo');
-    backgroundVideoElement.src = skillsData.backgroundVideo;
+    const backgroundSource = document.createElement('source');
+    backgroundSource.src = skillsData.backgroundVideo;
+    backgroundSource.type = "video/mp4";
+    backgroundVideoElement.appendChild(backgroundSource);
 
     // Populate the main videos
     const videosContainer = document.getElementById('skillsVideos');
@@ -116,9 +118,12 @@ function populateSkillsSection() {
         // Create the video element
         const videoElement = document.createElement('video');
         videoElement.classList.add('video');
-        videoElement.setAttribute('autoplay', true);
-        videoElement.setAttribute('loop', true);
-        videoElement.setAttribute('muted', true);
+        
+        // Directly set properties for autoplay, loop, and muted
+        videoElement.autoplay = true;
+        videoElement.loop = true;
+        videoElement.muted = true;
+        videoElement.controls = true;  // Optional: Add controls for testing
 
         // Create the source element for the video
         const sourceElement = document.createElement('source');

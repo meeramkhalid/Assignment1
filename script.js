@@ -5,7 +5,7 @@ const profileData = {
     bio: "Hello, I’m Meeram Khalid (میرام خالد), a 21-year-old passionate about web development and technology. With a keen interest in crafting intuitive user interfaces and solving complex problems, I am dedicated to leveraging my skills and enthusiasm in the tech industry. My journey in web development is driven by a commitment to continuous learning and innovation.",
     backgroundImg: "images/blueBlud.jpg",
     overlayImg: "images/WhatsApp_Image_2024-09-14_at_6.36.45_PM-removebg.png",
-    resumeLink: "C:\\Users\\Meeram Khalid\\Downloads\\Meeram Khalid_Resume.pdf",
+    resumeLink: "https://docs.google.com/document/d/1nhvS7VROJEM41WF6rhlPTS1pN2NsKOpgJDMC_wlC3ws/edit?usp=drive_linkf",
     navLinks: ["Home", "Education", "Skills & Certificates", "Projects", "Courses", "Experience", "Contact"]
 };
 
@@ -297,6 +297,63 @@ function populateExperienceSection() {
         experienceContainer.appendChild(expDescription);
     });
 }
+const contactData = {
+    heading: "Contact",
+    message: "Feel free to contact me!",
+    info: [
+        {
+            icon: "fa-solid fa-envelope",
+            label: "Email",
+            value: "meeramkhalid2@gmail.com",
+            link: "mailto:meeramkhalid2@gmail.com"
+        },
+        {
+            icon: "fa-solid fa-phone",
+            label: "Phone",
+            value: "+92 323-0041996",
+            link: "tel:+923230041996"
+        },
+        {
+            icon: "fa-brands fa-linkedin",
+            label: "LinkedIn",
+            value: "https://www.linkedin.com/in/meeram-khalid-7b7840208/",
+            link: "https://www.linkedin.com/in/meeram-khalid-7b7840208/"
+        }
+    ]
+};
+
+// Function to populate the contact section
+function populateContactSection() {
+    // Set the contact heading
+    document.querySelector('#contact .heading').textContent = contactData.heading;
+
+    // Set the contact message
+    document.querySelector('#contact p').textContent = contactData.message;
+
+    // Populate the contact info
+    const contactInfo = document.querySelector('.contact-info');
+    contactInfo.innerHTML = ''; // Clear any existing content
+
+    contactData.info.forEach(contact => {
+        const li = document.createElement('li');
+        
+        const icon = document.createElement('i');
+        icon.className = contact.icon;
+
+        const label = document.createElement('span');
+        label.textContent = ` ${contact.label}: `;
+
+        const link = document.createElement('a');
+        link.href = contact.link;
+        link.textContent = contact.value;
+        link.target = "_blank";
+
+        li.appendChild(icon);
+        li.appendChild(label);
+        li.appendChild(link);
+        contactInfo.appendChild(li);
+    });
+}
 
 
 // Function to highlight the current section link while scrolling
@@ -349,6 +406,7 @@ window.onload = function() {
     populateProjectsSection();
     populateCoursesSection();
     populateExperienceSection();
+    populateContactSection();
 };
 
 // Attach the scroll event for highlighting the current section

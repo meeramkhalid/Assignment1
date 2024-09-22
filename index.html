@@ -6,17 +6,14 @@
     <title>Professional Profile</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <style>
-        /* Basic styles for the navbar */
         .navbar a.active {
             font-weight: bold;
-            background-color:  #a0ddf9; 
-            color:rgb(14, 14, 85); 
-            border:rgb(14, 14, 85); 
-           
+            background-color: #a0ddf9;
+            color: rgb(14, 14, 85);
+            border: rgb(14, 14, 85);
         }
-
         html {
             scroll-behavior: smooth;
         }
@@ -25,35 +22,27 @@
 <body>
 
     <!-- Navigation Bar -->
-    <div class="navbar">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#skills" class="nav-link">Skills & Certificates</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#courses" class="nav-link">Courses</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#contact" class="nav-link">Contact</a>
-    </div>
+    <div class="navbar" id="navbar"></div>
 
+    <!-- Home Section -->
     <div id="home" class="section MainInfo">
-    <div class="Headings-container"> <h1 class="heading">About Me</h1></div>
+        <div class="Headings-container">
+            <h1 id="aboutMeHeading"></h1>
+        </div>
         <div class="box-container">
-            <p class="paragraph">
-                Hello, I’m <span class="highlighted-name">Meeram Khalid (میرام خالد)</span>, a 21-year-old passionate about web development and technology. 
-                With a keen interest in crafting intuitive user interfaces and solving complex problems, I am dedicated to leveraging my skills and enthusiasm 
-                in the tech industry. My journey in web development is driven by a commitment to continuous learning and innovation, enabling me to stay current 
-                with the latest trends and best practices in the field.
-            </p>
+            <p id="aboutMeText" class="paragraph"></p>
         </div>
-    
-        <div class="image-container">
-            <img src="images/blueBlud.jpg" alt="Background Image" class="background-img">
-            <img src="images/WhatsApp_Image_2024-09-14_at_6.36.45_PM-removebg.png" alt="Overlay Image" class="overlay-img">
-        </div>
-        <a href="C:\Users\Meeram Khalid\Downloads\Meeram Khalid_Resume.pdf" class="cv-button" download>Download CV</a>
 
+        <div class="image-container">
+            <img id="backgroundImage" alt="Background Image" class="background-img">
+            <img id="overlayImage" alt="Overlay Image" class="overlay-img">
+        </div>
+        <a id="cvButton" class="cv-button" download>Download CV</a>
     </div>
-    
+
+    <!-- Link to external JavaScript file -->
+    <script src="scripts.js"></script>
+
    
     <div id="education" class="section MainInfo">
         <div class="Headings-container"> <h1 class="heading">Education</h1></div>

@@ -18,16 +18,17 @@ body {
     opacity: 1;
     height: 100%;
     width: 170px; /* Set width for the navbar */
-    background-color: #58c5f7;
+    background-color:rgb(14, 14, 85); /* #58c5f7;*/
     position: fixed; /* Fixed the navbar on the left side */
     top: 0;
     left: 0;
     overflow-x: hidden; /* Disable horizontal scrolling */
+    border-radius: 0%;
 }
 /* Links inside the navigation bar */
 .navbar a {
     display: block; 
-    color: rgb(14, 14, 85);
+    color: rgb(251, 251, 251);
     padding: 14px 20px;
     text-align: left;
     font-size: medium;
@@ -56,7 +57,7 @@ div {
     margin-top: 5%;
 }
 .Headings-container {
-    background-color: rgb(2, 35, 85); /* Background color for the heading box */
+    background-color:  rgba(0, 49, 83, 0.5); /* Background color for the heading box */
     padding: 1px; /* Adds space inside the box */
     width: calc(100% + 40px); /* Full width including compensation for the negative margin */
     position: relative;
@@ -127,8 +128,11 @@ div {
 .overlay-img:hover {
     left: 10%;
 }
-#home, #education, #skills, #certificates, #courses, #experience, #contact {
-    height: 750px;
+#experience, #contact {
+    height: 450px;
+}
+#courses{
+    height:750px;
 }
 .cv-button {
     text-align: center;
@@ -159,7 +163,6 @@ div {
     width:30%;
     height: 30%;
    align-items: flex-start;
-    /* margin-top:5%; */
 }
 .education-text {
     font-size: 16px;
@@ -365,4 +368,365 @@ div {
 }
 .fa-brands fa-linkedin{
     font-size: 50%;
+}
+
+/* RESPONSIVENESS */
+@media only screen and (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        font-family: Arial, sans-serif;
+        scroll-behavior: smooth;
+        margin: 0;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        box-sizing: border-box; /* Include padding and borders in width/height */
+    }
+    .mobile-menu-icon {
+        display: block; /* Show ellipsis for mobile screens */
+        font-size: 24px; /* Adjust the size as needed */
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    /* Navbar replaced with Hamburger for mobile */
+    .navbar {
+        display: none; /* Hide the navbar initially */
+    }
+
+    /* Hamburger Menu */
+    .hamburger-menu {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+        cursor: pointer;
+        background-color: rgb(14, 14, 85);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .hamburger-menu div {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    /* Displaying the mobile navbar when hamburger is clicked */
+    .navbar.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%; /* Adjust to fit better on mobile */
+        height: 100%;
+        background-color: rgb(14, 14, 85);
+        z-index: 999;
+        padding-top: 20px;
+        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease;
+    }
+
+    .navbar a {
+        display: block;
+        color: rgb(251, 251, 251);
+        padding: 14px 20px;
+        text-align: left;
+        font-size: medium;
+        text-decoration: none;
+    }
+
+    .navbar a:hover {
+        background-color: #a0ddf9;
+        color: rgb(14, 14, 85);
+    }
+    .mainHeading {
+        text-align: center;
+        font-size: medium;
+        text-decoration: underline;
+        color: rgb(2, 35, 85);
+        margin: 20px 0; /* Center margins */
+    }
+
+    .MainInfo {
+        margin: 5%; /* Adjust margins */
+    }
+
+    .Headings-container {
+        background-color: rgba(0, 49, 83, 0.5);
+        height: 20%;
+        width: 100%; /* Full width */
+        color: white;
+        text-align: center;
+        margin: 0; /* Center margins */
+        box-sizing: border-box;
+    }
+
+    .heading {
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: x-large;
+        color: white;
+    }
+
+    .section {
+        margin: 0; /* Remove left margin */
+        padding: 0 5%; /* Add padding */
+    }
+
+    .box-container {
+            width: 700px; 
+            height: 30%;
+            margin: 5% auto; 
+        
+    }
+
+    .paragraph {
+        margin-top: 5%;
+        margin-right: 0;
+        font-size: small;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .image-container {
+        width: 60%; /* Responsive image width */
+        margin-left: auto; /* Push the image to the right */
+    margin-right: 0;
+    margin-top: -50px;
+    margin-bottom: 20px; /* Adjust this value for spacing from the heading below */
+        z-index: 2;
+    }
+
+    .background-img {
+        width: 100%; /* Full width */
+        height: auto;
+        display: block;
+    }
+
+    .overlay-img {
+        width: 100%; /* Full width */
+        height: auto;
+    }
+
+    #experience, #contact {
+        height: auto; /* Allow for flexible height */
+        margin: 0 5%; /* Adjust margins */
+    }
+
+    #courses {
+        height: auto; /* Allow for flexible height */
+        margin: 0 5%; /* Adjust margins */
+    }
+
+    .cv-button {
+        text-align: center; /* Center text inside the button */
+        font-size: large;
+        padding: 10px 20px;
+        background-color: rgb(2, 35, 85);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline-block; /* Keep button as an inline block */
+        transition: background-color 0.3s ease;
+        margin-left: 0;
+        margin-bottom: 20px;
+        margin-top: -50px;
+    }
+
+    .cv-button:hover {
+        background-color: #a0ddf9;
+        color: rgb(14, 14, 85);
+    }
+
+    * {
+        box-sizing: border-box; /* Ensure all elements use border-box sizing */
+    }
+    
+    .education-container {
+        margin-bottom: 5%;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align content to the left */
+        margin-right: 10%; /* Adjust right margin as necessary */
+        margin-left: 5%; /* Add a left margin to move content to the left */
+        gap: 15px;
+        width: 80%; /* Adjust the width as necessary */
+        padding: 0 10px; /* Add padding to prevent content from touching the edges */
+        overflow: hidden; /* Prevent horizontal overflow */
+    }
+    
+    .edu {
+        width:50%;
+        height: 50%;
+        align-self: flex-start; /* Align the image to the left */
+        margin-left: 30%;
+    }
+    
+    .education-text {
+        font-size: 12px;
+        color: #333;
+        width: 100%; /* Make sure the text takes full width */
+        text-align: left; /* Align the text to the left */
+        padding: 0 10px; /* Add padding to prevent the text from touching edges */
+    }
+    
+   .skills {
+    display: flex;
+    align-items: flex-start;
+        width: 100%; /* Full width for small screens */
+        padding: 10px;
+    }
+    .skills-container {
+        margin-top: 10%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        margin-left: -5px;
+        width: 100%; /* Ensure it fits mobile screen width */
+    }
+
+    .projects-container {
+        width: 100%; /* Full width for projects */
+        display: flex;
+        flex-direction: column; /* Stack projects */
+        gap: 10px; /* Add space between accordions */
+        align-items: flex-start; /* Align all items to the left */
+    }
+    
+    .accordion {
+        background-color: rgb(2, 35, 85);
+        color: #f8f3f3;
+        cursor: pointer;
+        padding: 15px;
+        width: 100%; /* Full width for accordion */
+        text-align: left; /* Align text to the left */
+        border: none;
+        outline: none;
+        font-size: 16px;
+        transition: 0.3s;
+        border-radius: 5px;
+    }
+    
+    .accordion:hover {
+        background-color: #58c5f7;
+        color: rgb(2, 35, 85);
+    }
+    
+    .panel {
+        padding: 10px 18px;
+        display: none; /* Hidden by default */
+        background-color: #58c5f7;
+        color: rgb(2, 35, 85);
+        overflow: hidden;
+        border-radius: 5px;
+        width: 100%; /* Make the panel take full width */
+        box-sizing: border-box; /* Ensure padding is included in width */
+        margin-top: 5px; /* Add some space between the button and panel */
+    }
+    
+    .panel ul {
+        list-style-type: none;
+        padding-left: 0; /* Remove default padding */
+        margin: 10px 0;
+    }
+    
+    .panel li {
+        padding: 5px 0;
+    }
+    
+    .courses-list {
+        display: flex;
+        flex-direction: column; /* Stack course items */
+        gap: 15px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        width: 90%; /* Full width for course list */
+    }
+
+    .course-item {
+        display: flex;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #f5f5f5;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%; /* Full width for course items */
+    }
+
+    .course-number {
+        font-weight: bold;
+        margin-right: 20px;
+        font-size: 1.2em;
+        color: #007BFF;
+    }
+
+    .course-name {
+        font-size: 1em;
+        color: #333;
+    }
+
+    .experience-container {
+        display: flex;
+        flex-direction: column; /* Stack experience items */
+        align-items: flex-start;
+        gap: 15px;
+        width: 90%; /* Full width for experience */
+    }
+
+    .exp {
+        width: 100%; /* Full width for experience */
+        border-radius: 8px;
+    }
+
+    .experience-text {
+        font-size: 16px;
+        color: #333;
+    }
+
+    .experience-text h3 {
+        margin: 10px 0 5px 0;
+        font-weight: bold;
+        color: #032242;
+    }
+
+    .experience-text p {
+        margin: 0 0 15px 0;
+    }
+    .contact-info {
+        list-style-type: none; /* Removes bullets */
+        padding: 0; /* Removes default padding */
+        font-size: 18px; /* Increases font size */
+        color: #333; /* Text color */
+    }
+    
+    .contact-info li {
+        margin-bottom: 10px; /* Adds space between each item */
+        display: flex;
+        align-items: center; /* Aligns icons with text */
+        font-weight: bold;
+    }
+    
+    .contact-info a {
+        color: #000; /* Changes link color */
+        text-decoration: none; /* Removes underline from links */
+    }
+    
+    .contact-info a:hover {
+        color: #003898; /* Optional: Change color on hover */
+    }
+    
+    .contact-info i {
+        margin-right: 10px; /* Space between icon and text */
+        font-size: 20px; /* Adjust icon size */
+    }
+    .fa-brands fa-linkedin{
+        font-size: 50%;
+    }   
 }
